@@ -1,0 +1,13 @@
+name: ladybug
+type: theme
+# version: VERSION
+base theme: false
+core: 8.x
+core_version_requirement: ^8 || ^9
+# regions: default ones
+libraries:
+  - ladybug/global-styling
+  - ladybug/global-scripts
+#regions:
+#default ones ... no need to declare them
+#header, primary_menu, secondary_menu, breadcrumb, highlighted, help, content, sidebar_first, sidebar_second, footer 

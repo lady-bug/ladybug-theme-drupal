@@ -1,0 +1,30 @@
+ladybug.s:
+  label: small
+  mediaQuery: ''
+  weight: 0
+  multipliers:
+    - '1x'
+    #Android
+    - '1.5x'
+    #Mac retina display
+    - '2x'
+ladybug.m:
+  label: medium
+  mediaQuery: 'only screen and (min-device-width: 768px) and (min-width: 768px), only screen and (min-device-width: 768px) and (min-width: 768px) and (min-aspect-ratio: 1/1)'
+  weight: 1
+  multipliers:
+  - '1x'
+  #Android
+  - '1.5x'
+  #Mac retina display
+  - '2x'
+ladybug.l:
+  label: large
+  mediaQuery: 'only screen and (min-device-width: 1280px) and (min-width: 1280px), only screen and (min-device-width: 1280px) and (min-width: 1280px) and (min-aspect-ratio: 1/1)'
+  weight: 2
+  multipliers:
+  - '1x'
+  #Android
+  - '1.5x'
+  #Mac retina display
+  - '2x'

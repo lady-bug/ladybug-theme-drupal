@@ -1,0 +1,10 @@
+# ladybug.libraries.yml
+global-styling:
+  version: VERSION
+  css:
+    theme:
+      css/ladybug.css: {}
+global-scripts:
+  version: VERSION
+  js:
+    js/ladybug.js: {}
