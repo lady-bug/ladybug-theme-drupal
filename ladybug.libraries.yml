@@ -2,9 +2,20 @@
 global-styling:
   version: VERSION
   css:
+    #base:
+    #layout:
+    #component:
+    #state:
     theme:
-      css/ladybug.css: {}
-global-scripts:
+      css/print.css: {media: print}
+      css/global.css: {media: screen}
+
+global-scripting:
   version: VERSION
   js:
-    js/ladybug.js: {}
+    js/global.js: {}
+  dependencies:
+    - core/jquery
+    #- core/jquery.once
+    - core/drupal
+    #- core/drupalSettings
