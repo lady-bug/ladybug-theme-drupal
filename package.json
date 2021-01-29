@@ -4,6 +4,9 @@
   "description": "drupal theme using bootstrap 4",
   "main": "index.js",
   "scripts": {
+    "reset": "rm -f package-lock.json && rm -rf node_modules",
+    "reInstall": "rm -f package-lock.json && rm -rf node_modules && npm install",
+    "devMode": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,6 +27,26 @@
   "dependencies": {
     "bootstrap": "^4.6.0",
     "jquery": "^3.5.1",
-    "popper.js": "^1.16.1"
+    "popper.js": "^1.16.1",
+    "bootstrap-icons": "^1.0.0-alpha3"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.24.7",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-scss-lint": "^1.0.0",
+    "gulp-clean-css": "3.9.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-html-replace": "^1.6.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-postcss": "^8.0.0",
+    "gulp-uglify": "^3.0.0",
+    "merge-stream": "^1.0.1",
+    "gulp-load-plugins": "^2.0.4",
+    "postcss-inline-svg": "^4.1.0",
+    "postcss-pxtorem": "^5.1.1"
   }
 }
