@@ -16,9 +16,14 @@
     "sass"
   ],
   "author": "Valerie Hanesse",
-  "license": "",
+  "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/lady-bug/ladybug-theme-drupal/issues"
   },
-  "homepage": "https://github.com/lady-bug/ladybug-theme-drupal#readme"
+  "homepage": "https://github.com/lady-bug/ladybug-theme-drupal#readme",
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
+  }
 }
