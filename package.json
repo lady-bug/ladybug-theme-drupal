@@ -1,0 +1,24 @@
+{
+  "name": "ladybug",
+  "version": "1.0.0",
+  "description": "drupal theme using bootstrap 4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lady-bug/ladybug-theme-drupal.git"
+  },
+  "keywords": [
+    "drupal",
+    "bootstrap",
+    "sass"
+  ],
+  "author": "Valerie Hanesse",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/lady-bug/ladybug-theme-drupal/issues"
+  },
+  "homepage": "https://github.com/lady-bug/ladybug-theme-drupal#readme"
+}
