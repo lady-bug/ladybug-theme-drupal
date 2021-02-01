@@ -1,0 +1,23 @@
+{
+  "root": true,
+  "env": {
+      "browser": true,
+      "es6": true,
+      "node": true
+  },
+  "extends": [
+    "airbnb",
+    "plugin:prettier/recommended"
+  ],
+  "globals": {
+    "Drupal": true,
+    "drupalSettings": true,
+    "jQuery": true
+  },
+  "parserOptions": {
+      "ecmaVersion": 2018
+  },
+  "rules": {
+    "no-param-reassign": ["off"]
+  }
+}

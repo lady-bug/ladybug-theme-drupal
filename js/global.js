@@ -1,6 +1,6 @@
-(function ($, Drupal) {
+(function($, Drupal) {
   Drupal.behaviors.ladybug = {
-    attach: function (context, settings) {
+    attach: (context, settings) => {
       console.log($);
       console.log(Drupal);
       console.log(context);
