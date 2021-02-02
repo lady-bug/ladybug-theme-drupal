@@ -6,16 +6,12 @@
       "node": true
   },
   "extends": [
-    "airbnb",
-    "plugin:prettier/recommended"
+    "drupal"
   ],
   "globals": {
     "Drupal": true,
     "drupalSettings": true,
     "jQuery": true
-  },
-  "parserOptions": {
-      "ecmaVersion": 2018
   },
   "rules": {
     "no-param-reassign": ["off"]
