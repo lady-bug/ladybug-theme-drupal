@@ -35,6 +35,10 @@ const paths = {
     poppermap: './node_modules/popper.js/dist/umd/popper.min.js.map',
     dest: './js',
     watch: './js/src/*.js'
+  },
+  twig: {
+    src: './templates/**/*.html.twig',
+    watch: './templates/**/*.html.twig'
   }
 }
 
@@ -73,23 +77,31 @@ function styles () {
 function js () {
   return gulp.src([paths.js.bootstrap, paths.js.bootstrapmap, paths.js.jquery, paths.js.popper, paths.js.poppermap])
     .pipe(gulp.dest(paths.js.dest))
-    .pipe(browserSync.stream())
+    .pipe(browserSync.stream());
+}
+
+//load twig files
+function twig () {
+  return gulp.src(paths.twig.src)
+    .pipe(browserSync.stream());
 }
 
 // local mode server
-// watching scss/js files ... tbd twig files
+// watching scss/js/twig files
 function serve () {
   browserSync.init({
-    proxy: 'http://localhost',
+    proxy: 'http://localhost'
   })
 
   gulp.watch([paths.scss.watch], styles).on('change', browserSync.reload)
   gulp.watch([paths.js.watch], js).on('change', browserSync.reload)
+  gulp.watch([paths.twig.watch], twig).on('change', browserSync.reload)
 }
 
-const build = gulp.series(styles, gulp.parallel(js, serve))
+const build = gulp.series(styles, js, twig, serve)
 
 exports.styles = styles
 exports.js = js
+exports.twig = twig
 exports.serve = serve
 exports.default = build
