@@ -1,1 +1,23 @@
+<?php
+/**
+ * @file
+ * Functions to support theming in the ladybug theme.
+ */
 
+
+/**
+* Implements hook_page_attachments_alter().
+*/
+function ladybug_page_attachments_alter(&$page) {
+//modify content attribute value to comply with boostrap 4.6
+  $viewport = array(
+    '#tag' => 'meta',
+    '#attributes' => array(
+      'name' => 'viewport',
+      'content' => 'width=device-width, initial-scale=1, shrink-to-fit=no',
+    ),
+  );
+  $page['#attached']['html_head'][] = [$viewport, 'viewport'];
+}
+
+?>
