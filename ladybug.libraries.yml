@@ -13,7 +13,7 @@ global-styling:
 global-scripting:
   version: VERSION
   js:
-    js/global.js: {}
+    js/src/global.js: {}
   dependencies:
     - core/jquery
     #- core/jquery.once

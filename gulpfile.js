@@ -34,7 +34,7 @@ const paths = {
     popper: './node_modules/popper.js/dist/umd/popper.min.js',
     poppermap: './node_modules/popper.js/dist/umd/popper.min.js.map',
     dest: './js',
-    watch: './js/global.js'
+    watch: './js/src/*.js'
   }
 }
 
