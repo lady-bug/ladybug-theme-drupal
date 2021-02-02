@@ -28,11 +28,8 @@ const paths = {
     watch: './scss/**/*.scss'
   },
   js: {
-    bootstrap: './node_modules/bootstrap/dist/js/bootstrap.min.js',
-    bootstrapmap: './node_modules/bootstrap/dist/js/bootstrap.min.js.map',
-    jquery: './node_modules/jquery/dist/jquery.min.js',
-    popper: './node_modules/popper.js/dist/umd/popper.min.js',
-    poppermap: './node_modules/popper.js/dist/umd/popper.min.js.map',
+    bootstrap: './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
+    bootstrapmap: './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js.map',
     dest: './js',
     watch: './js/src/*.js'
   },
@@ -75,7 +72,7 @@ function styles () {
 
 // move  javascript files into js destination folder
 function js () {
-  return gulp.src([paths.js.bootstrap, paths.js.bootstrapmap, paths.js.jquery, paths.js.popper, paths.js.poppermap])
+  return gulp.src([paths.js.bootstrap, paths.js.bootstrapmap])
     .pipe(gulp.dest(paths.js.dest))
     .pipe(browserSync.stream());
 }

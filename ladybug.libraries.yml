@@ -13,6 +13,7 @@ global-styling:
 global-scripting:
   version: VERSION
   js:
+    js/bootstrap.bundle.min.js: {}
     js/src/global.js: {}
   dependencies:
     - core/jquery
