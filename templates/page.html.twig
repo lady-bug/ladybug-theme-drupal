@@ -47,20 +47,35 @@
 #}
 <div class="layout-container">
 
-  <header role="banner">
+  {% if page.header %}
+  <header role="banner"><div class="container">
     {{ page.header }}
-  </header>
+  </div></header>
+  {% endif %}
 
+  {% if page.primary_menu %}
+  <section role="navigation"><div class="container">
   {{ page.primary_menu }}
-  {{ page.secondary_menu }}
+  </div></section>
+  {% endif %}
 
+  {% if page.secondary_menu %}
+  <section role="navigation"><div class="container">
+  {{ page.secondary_menu }}
+  </div></section>
+  {% endif %}
+
+  {% if page.breadcrumb %}
+  <section role="breadcrumb"><div class="container">
   {{ page.breadcrumb }}
+  </div></section>
+  {% endif %}
 
   {{ page.highlighted }}
 
   {{ page.help }}
 
-  <main role="main">
+  <main role="main"><div class="container">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
     <div class="layout-content">
@@ -79,12 +94,12 @@
       </aside>
     {% endif %}
 
-  </main>
+  </div></main>
 
   {% if page.footer %}
-    <footer role="contentinfo">
+    <footer role="contentinfo"><div class="container">
       {{ page.footer }}
-    </footer>
+    </div></footer>
   {% endif %}
 
 </div>{# /.layout-container #}
