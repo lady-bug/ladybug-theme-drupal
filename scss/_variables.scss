@@ -1,1 +1,35 @@
-//variable overrides
+//colours overrides
+$gray-100:  #cfd8dc;
+$gray-200:  #b0bec5;
+$gray-300:  #90a4ae;
+$gray-400:  #78909c;
+$gray-500:  #607d8b;
+$gray-600:  #546e7a;
+$gray-700:  #455a64;
+$gray-800:  #37474f;
+$gray-900:  #263238;
+
+$blue:      #42a5f5;
+$indigo:    #5c6bc0;
+$purple:    #ab47bc;
+$pink:      #ec407a;
+$red:       #ef5350;
+$orange:    #ffa726;
+$yellow:    #ffee58;
+$green:     #66bb6a;
+$teal:      #26a69a;
+$cyan:      #26c6da;
+
+$primary:         $teal;
+$primary-light:   #64d8cb;
+$primary-dark:    #00766c;
+$secondary:       $gray-400;
+$secondary-light: $gray-200;
+$secondary-dark:  $gray-600;
+
+$theme-colors: (
+  "primary-light":    $primary-light,
+  "primary-dark":     $primary-dark,
+  "secondary-light":  $secondary-light,
+  "secondary-dark":   $secondary-dark
+);
