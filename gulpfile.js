@@ -1,16 +1,16 @@
-let gulp = require('gulp'),
-  sass = require('gulp-sass'),
-  sourcemaps = require('gulp-sourcemaps'),
-  $ = require('gulp-load-plugins')(),
-  cleanCss = require('gulp-clean-css'),
-  rename = require('gulp-rename'),
-  merge = require('merge-stream'),
-  postcss = require('gulp-postcss'),
-  autoprefixer = require('autoprefixer'),
-  postcssInlineSvg = require('postcss-inline-svg'),
-  browserSync = require('browser-sync').create(),
-  pxtorem = require('postcss-pxtorem'),
-	postcssProcessors = [
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const sourcemaps = require('gulp-sourcemaps');
+const $ = require('gulp-load-plugins')();
+const cleanCss = require('gulp-clean-css');
+const rename = require('gulp-rename');
+const merge = require('merge-stream');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const postcssInlineSvg = require('postcss-inline-svg');
+const browserSync = require('browser-sync').create();
+const pxtorem = require('postcss-pxtorem');
+const	postcssProcessors = [
 		postcssInlineSvg({
       removeFill: true,
       paths: ['./node_modules/bootstrap-icons/icons']
@@ -64,28 +64,29 @@ function styles () {
       .pipe(cleanCss())
       .pipe(rename({ suffix: '.min' }))
       .pipe(gulp.dest(paths.scss.dest))
-      .pipe(browserSync.stream());
+			.pipe(browserSync.stream());
   });
 
   return merge(tasks);
-}
+};
 
 // move  javascript files into js destination folder
 function js () {
   return gulp.src([paths.js.bootstrap, paths.js.bootstrapmap])
     .pipe(gulp.dest(paths.js.dest))
-    .pipe(browserSync.stream());
+		.pipe(browserSync.stream());
 }
 
 //load twig files
 function twig () {
   return gulp.src(paths.twig.src)
-    .pipe(browserSync.stream());
+		.pipe(browserSync.stream());
 }
 
 // local mode server
 // watching scss/js/twig files
 function serve () {
+
   browserSync.init({
     proxy: 'http://localhost'
   })
