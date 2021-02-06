@@ -1,5 +1,7 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
+sass.compiler = require('sass');
+const  Fiber = require('fibers');
 const sourcemaps = require('gulp-sourcemaps');
 const $ = require('gulp-load-plugins')();
 const cleanCss = require('gulp-clean-css');
@@ -42,17 +44,25 @@ const paths = {
 // compile global sass into css destination folder
 // auto-inject into browsers
 function styles () {
-    return gulp.src(paths.scss.src)
-      .pipe(sourcemaps.init())
-      .pipe(sass().on('error', sass.logError))
-      .pipe($.postcss(postcssProcessors))
-      .pipe(postcss([autoprefixer({})]))
-      .pipe(sourcemaps.write('./'))
-      .pipe(gulp.dest(paths.scss.dest))
-      .pipe(cleanCss())
-      .pipe(rename({ suffix: '.min' }))
-      .pipe(gulp.dest(paths.scss.dest))
-			.pipe(browserSync.stream());
+	//from sass compilation options
+  //--output-style compressed --source-map true --source-map-contents true --precision 6
+  return gulp.src(paths.scss.src)
+    .pipe(sourcemaps.init())
+    .pipe(sass({
+      fiber: Fiber,
+      outputStyle: 'compressed',
+      precision: 6,
+      sourceMap: true,
+      sourceMapContent: true
+    }).on('error', sass.logError))
+    .pipe($.postcss(postcssProcessors))
+    .pipe(postcss([autoprefixer({})]))
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest(paths.scss.dest))
+    .pipe(cleanCss())
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest(paths.scss.dest))
+		.pipe(browserSync.stream());
 };
 
 // move  javascript files into js destination folder
