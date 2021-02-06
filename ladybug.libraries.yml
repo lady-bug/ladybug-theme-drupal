@@ -7,8 +7,8 @@ global-styling:
     #component:
     #state:
     theme:
-      css/global.css: {}
-      css/print.css: {media: print}
+      css/global.min.css: {}
+      css/print.min.css: {media: print}
 
 global-scripting:
   version: VERSION
