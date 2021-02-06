@@ -6,7 +6,6 @@ const sourcemaps = require('gulp-sourcemaps');
 const $ = require('gulp-load-plugins')();
 const cleanCss = require('gulp-clean-css');
 const rename = require('gulp-rename');
-const merge = require('merge-stream');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const postcssInlineSvg = require('postcss-inline-svg');
