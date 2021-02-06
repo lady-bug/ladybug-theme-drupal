@@ -23,7 +23,7 @@ const	postcssProcessors = [
 
 const paths = {
   scss: {
-    src: ['./scss/global.scss','./scss/print.scss'],
+    src: './scss/compile/*.scss',
     dest: './css',
     watch: './scss/**/*.scss'
   },
@@ -42,32 +42,17 @@ const paths = {
 // compile global sass into css destination folder
 // auto-inject into browsers
 function styles () {
-  var tasks = paths.scss.src.map(function(elt){
-    return gulp.src([elt])
+    return gulp.src(paths.scss.src)
       .pipe(sourcemaps.init())
       .pipe(sass().on('error', sass.logError))
       .pipe($.postcss(postcssProcessors))
-      .pipe(postcss([autoprefixer({
-				browsers: [
-	        'Chrome >= 45',
-	        'Firefox >= 38',
-	        'Edge >= 12',
-	        'Explorer >= 10',
-	        'iOS >= 9',
-	        'Safari >= 9',
-	        'Android >= 4.4',
-	        'Opera >= 30'
-	      ]
-      })]))
+      .pipe(postcss([autoprefixer({})]))
       .pipe(sourcemaps.write('./'))
       .pipe(gulp.dest(paths.scss.dest))
       .pipe(cleanCss())
       .pipe(rename({ suffix: '.min' }))
       .pipe(gulp.dest(paths.scss.dest))
 			.pipe(browserSync.stream());
-  });
-
-  return merge(tasks);
 };
 
 // move  javascript files into js destination folder
