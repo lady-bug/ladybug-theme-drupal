@@ -48,18 +48,18 @@ function styles () {
       .pipe(sass().on('error', sass.logError))
       .pipe($.postcss(postcssProcessors))
       .pipe(postcss([autoprefixer({
-        browsers: [
-          'Chrome >= 35',
-          'Firefox >= 38',
-          'Edge >= 12',
-          'Explorer >= 10',
-          'iOS >= 8',
-          'Safari >= 8',
-          'Android 2.3',
-          'Android >= 4',
-          'Opera >= 12']
+				browsers: [
+	        'Chrome >= 45',
+	        'Firefox >= 38',
+	        'Edge >= 12',
+	        'Explorer >= 10',
+	        'iOS >= 9',
+	        'Safari >= 9',
+	        'Android >= 4.4',
+	        'Opera >= 30'
+	      ]
       })]))
-      .pipe(sourcemaps.write())
+      .pipe(sourcemaps.write('./'))
       .pipe(gulp.dest(paths.scss.dest))
       .pipe(cleanCss())
       .pipe(rename({ suffix: '.min' }))
