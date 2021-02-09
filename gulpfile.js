@@ -35,7 +35,13 @@ const paths = {
     watch: './js/src/*.js'
   },
   twig: {
-    watch: './templates/'
+    watch: './templates/**/*.twig'
+  },
+	yaml: {
+    watch: './*.yml'
+  },
+	theme: {
+    watch: './ladybug.theme'
   },
 	config: {
 		drush: '../../../vendor/bin/drush'
@@ -89,6 +95,8 @@ function serve () {
   gulp.watch([paths.scss.watch], styles).on('all', browserSync.reload)
   gulp.watch([paths.js.watch], js).on('all', browserSync.reload)
   gulp.watch([paths.twig.watch], drushcr).on('all', browserSync.reload)
+	gulp.watch([paths.yaml.watch], drushcr).on('all', browserSync.reload)
+	gulp.watch([paths.theme.watch], drushcr).on('all', browserSync.reload)
 }
 
 const build = gulp.series(styles, js, serve)
