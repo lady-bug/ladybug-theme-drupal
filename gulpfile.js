@@ -1,7 +1,8 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 sass.compiler = require('sass');
-const  Fiber = require('fibers');
+const shell = require('gulp-shell');
+const Fiber = require('fibers');
 const sourcemaps = require('gulp-sourcemaps');
 const $ = require('gulp-load-plugins')();
 const cleanCss = require('gulp-clean-css');
@@ -35,9 +36,16 @@ const paths = {
     watch: './js/src/*.js'
   },
   twig: {
-    src: './templates/**/*.html.twig',
-    watch: './templates/**/*.html.twig'
-  }
+    watch: './templates/'
+  },
+	config: {
+		drush: '../../../vendor/bin/drush'
+	}
+}
+
+function drushcr () {
+	return gulp.src(paths.twig.watch,{read: false})
+		.pipe(shell([paths.config.drush + ' cache:rebuild --cache-clear']));
 }
 
 // compile global sass into css destination folder
@@ -71,12 +79,6 @@ function js () {
 		.pipe(browserSync.stream());
 }
 
-//load twig files
-function twig () {
-  return gulp.src(paths.twig.src)
-		.pipe(browserSync.stream());
-}
-
 // local mode server
 // watching scss/js/twig files
 function serve () {
@@ -87,13 +89,12 @@ function serve () {
 
   gulp.watch([paths.scss.watch], styles).on('change', browserSync.reload)
   gulp.watch([paths.js.watch], js).on('change', browserSync.reload)
-  gulp.watch([paths.twig.watch], twig).on('change', browserSync.reload)
+  gulp.watch([paths.twig.watch], drushcr).on('change', browserSync.reload)
 }
 
-const build = gulp.series(styles, js, twig, serve)
+const build = gulp.series(styles, js, serve)
 
 exports.styles = styles
 exports.js = js
-exports.twig = twig
 exports.serve = serve
 exports.default = build
