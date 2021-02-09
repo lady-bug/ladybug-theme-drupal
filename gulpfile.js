@@ -4,7 +4,6 @@ sass.compiler = require('sass');
 const shell = require('gulp-shell');
 const Fiber = require('fibers');
 const sourcemaps = require('gulp-sourcemaps');
-const $ = require('gulp-load-plugins')();
 const cleanCss = require('gulp-clean-css');
 const rename = require('gulp-rename');
 const postcss = require('gulp-postcss');
@@ -62,7 +61,7 @@ function styles () {
       sourceMap: true,
       sourceMapContent: true
     }).on('error', sass.logError))
-    .pipe($.postcss(postcssProcessors))
+    .pipe(postcss(postcssProcessors))
     .pipe(postcss([autoprefixer({})]))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(paths.scss.dest))

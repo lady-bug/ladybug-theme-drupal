@@ -36,7 +36,6 @@
     "fibers": "^5.0.0",
     "gulp": "^4.0.2",
     "gulp-clean-css": "3.9.4",
-    "gulp-load-plugins": "^2.0.4",
     "gulp-postcss": "^9.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^4.1.0",
