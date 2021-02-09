@@ -19,4 +19,17 @@ function ladybug_page_attachments_alter(&$page) {
   $page['#attached']['html_head'][] = [$viewport, 'viewport'];
 }
 
+/**
+* Implements hook_preprocess_block().
+*/
+function ladybug_preprocess_block(&$variables) {
+  $site_config = \Drupal::config('system.site');
+  if ($variables['base_plugin_id'] == 'system_branding_block') {
+    $the_slogan = $site_config->get('slogan');
+    //var_dump($site_config->get('slogan'));
+    //display symbols such as < or /> from the slogan
+    $variables['site_slogan'] = html_entity_decode($the_slogan);
+  }
+}
+
 ?>
