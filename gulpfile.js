@@ -87,9 +87,9 @@ function serve () {
     proxy: 'http://localhost'
   })
 
-  gulp.watch([paths.scss.watch], styles).on('change', browserSync.reload)
-  gulp.watch([paths.js.watch], js).on('change', browserSync.reload)
-  gulp.watch([paths.twig.watch], drushcr).on('change', browserSync.reload)
+  gulp.watch([paths.scss.watch], styles).on('all', browserSync.reload)
+  gulp.watch([paths.js.watch], js).on('all', browserSync.reload)
+  gulp.watch([paths.twig.watch], drushcr).on('all', browserSync.reload)
 }
 
 const build = gulp.series(styles, js, serve)
