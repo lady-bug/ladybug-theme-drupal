@@ -17,12 +17,12 @@
 #}
 {% block content %}
   {% if site_logo %}
-    <p><a href="{{ path('<front>') }}" rel="home"><img src="{{ site_logo }}" alt="{{ 'Home'|t }}" /></a></p>
+    <p id="site-logo"><a href="{{ path('<front>') }}" rel="home"><img src="{{ site_logo }}" alt="{{ 'Home'|t }}" /></a></p>
   {% endif %}
   {% if site_name %}
-    <p>{{ site_name }}</p>
+    {{ site_name }}
   {% endif %}
   {% if site_slogan %}
-    <p>{{ site_slogan }}</p>
+    {{ site_slogan }}
   {% endif %}
 {% endblock %}
