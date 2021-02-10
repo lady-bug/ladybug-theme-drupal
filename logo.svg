@@ -2,40 +2,40 @@
 <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="370px" height="310px" viewBox="0 0 370 310" enable-background="new 0 0 370 310" xml:space="preserve">
+	 width="50px" height="50px" viewBox="160.75 129.417 50 50" enable-background="new 160.75 129.417 50 50" xml:space="preserve">
 <g id="version_s">
-	<ellipse id="body" cx="184.427" cy="167.007" rx="105.906" ry="131.993"/>
-	<path id="separator_body" fill="none" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round" stroke-miterlimit="10" d="
-		M111.199,84.5c0,17.961,44.728,36.5,74.924,36.5h-0.731c40.858,0,72.81-17.789,72.81-35.75"/>
+	<ellipse id="body" cx="185.689" cy="155.959" rx="13.238" ry="16.5"/>
+	<path id="separator_body" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="
+		M176.536,145.646c0,2.245,5.592,4.562,9.366,4.562h-0.092c5.107,0,9.102-2.224,9.102-4.469"/>
 	
-		<line id="separator_head" fill="none" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round" stroke-miterlimit="10" x1="184" y1="292" x2="184" y2="130"/>
+		<line id="separator_head" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="185.637" y1="171.584" x2="185.637" y2="151.334"/>
 	<g id="legs">
 		
-			<polyline id="leg_1" fill="none" stroke="#000000" stroke-width="16" stroke-linecap="round" stroke-linejoin="bevel" stroke-miterlimit="10" points="
-			39.25,89.82 80.5,107.191 88.75,132.463 		"/>
+			<polyline id="leg_1" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel" stroke-miterlimit="10" points="
+			167.543,146.312 172.699,148.482 173.73,151.642 		"/>
 		
-			<polyline id="leg_2" fill="none" stroke="#000000" stroke-width="16" stroke-linecap="round" stroke-linejoin="bevel" stroke-miterlimit="10" points="
-			331.004,89.82 289.754,107.191 281.504,132.463 		"/>
+			<polyline id="leg_2" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel" stroke-miterlimit="10" points="
+			204.012,146.312 198.855,148.482 197.824,151.642 		"/>
 		
-			<polyline id="leg_3" fill="none" stroke="#000000" stroke-width="16" stroke-linecap="round" stroke-linejoin="bevel" stroke-miterlimit="10" points="
-			61.042,298.727 61.238,253.951 93.956,236.299 		"/>
+			<polyline id="leg_3" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel" stroke-miterlimit="10" points="
+			170.267,172.424 170.291,166.828 174.381,164.621 		"/>
 		
-			<polyline id="leg_4" fill="none" stroke="#000000" stroke-width="16" stroke-linecap="round" stroke-linejoin="bevel" stroke-miterlimit="10" points="
-			308.945,298.727 308.75,253.951 276.032,236.299 		"/>
+			<polyline id="leg_4" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel" stroke-miterlimit="10" points="
+			201.255,172.424 201.23,166.828 197.141,164.621 		"/>
 		
-			<polyline id="leg_5" fill="none" stroke="#000000" stroke-width="16" stroke-linecap="round" stroke-linejoin="bevel" stroke-miterlimit="10" points="
-			359.834,193.66 325.649,164.742 290.982,178.17 		"/>
+			<polyline id="leg_5" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel" stroke-miterlimit="10" points="
+			207.615,159.291 203.343,155.676 199.01,157.355 		"/>
 		
-			<polyline id="leg_6" fill="none" stroke="#000000" stroke-width="16" stroke-linecap="round" stroke-linejoin="bevel" stroke-miterlimit="10" points="
-			9.982,193.66 44.167,164.742 78.834,178.17 		"/>
+			<polyline id="leg_6" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel" stroke-miterlimit="10" points="
+			163.885,159.291 168.157,155.676 172.491,157.355 		"/>
 	</g>
 	<g id="aerials">
 		
-			<polyline id="aerialleft" fill="none" stroke="#000000" stroke-width="16" stroke-linecap="round" stroke-linejoin="bevel" stroke-miterlimit="10" points="
-			169.25,38.014 132.25,20.08 98,10.335 		"/>
+			<polyline id="aerialleft" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel" stroke-miterlimit="10" points="
+			183.793,139.835 179.168,137.594 174.887,136.375 		"/>
 		
-			<polyline id="aerial_right" fill="none" stroke="#000000" stroke-width="16" stroke-linecap="round" stroke-linejoin="bevel" stroke-miterlimit="10" points="
-			202,38.014 239,20.08 273.25,10.335 		"/>
+			<polyline id="aerial_right" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel" stroke-miterlimit="10" points="
+			187.887,139.835 192.512,137.594 196.793,136.375 		"/>
 	</g>
 </g>
 </svg>
