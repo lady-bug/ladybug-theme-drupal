@@ -47,22 +47,24 @@
 #}
 <div class="layout-container">
 
-  {% if page.header %}
+  {% if page.header or page.primary_menu %}
   <header role="banner"><div class="container">
-    {{ page.header }}
+    <div class="row">
+      <div class="col-auto align-self-center">
+      {% if page.header %}
+        {{ page.header }}
+      {% endif %}
+      </div>
+      <div class="col align-self-center">
+      {# space dedicated for social networks icons and links such as linkedin or github #}
+      </div>
+      <div class="col-auto align-self-center">
+      {% if page.primary_menu %}
+        {{ page.primary_menu }}
+      {% endif %}
+      </div>
+    </div>
   </div></header>
-  {% endif %}
-
-  {% if page.primary_menu %}
-  <section role="navigation"><div class="container">
-  {{ page.primary_menu }}
-  </div></section>
-  {% endif %}
-
-  {% if page.secondary_menu %}
-  <section role="navigation"><div class="container">
-  {{ page.secondary_menu }}
-  </div></section>
   {% endif %}
 
   {% if page.breadcrumb %}
@@ -95,6 +97,12 @@
     {% endif %}
 
   </div></main>
+
+  {% if page.secondary_menu %}
+  <section role="navigation"><div class="container">
+  {{ page.secondary_menu }}
+  </div></section>
+  {% endif %}
 
   {% if page.footer %}
     <footer role="contentinfo"><div class="container">
