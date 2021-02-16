@@ -32,4 +32,22 @@ function ladybug_preprocess_block(&$variables) {
   $site_slogan = html_entity_decode($site_config->get('slogan'));
   $variables['site_slogan'] = $site_slogan;
 }
+
+/**
+* Implements hook_preprocess_menu__main()
+* @param array $variables:
+*  - add class navbar-nav from bootstrap on the main nav
+*/
+function ladybug_preprocess_menu__main(&$variables) {
+  $variables['attributes']['class'][] = 'navbar-nav';
+}
+
+/**
+* Implements hook_preprocess_block__system_menu_block__main()
+* @param array $variables:
+*  - add class collapsable on mobile from bootstrap on the main nav
+*/
+function ladybug_preprocess_block__system_menu_block__main(&$variables) {
+  $variables['attributes']['class'][] = 'navbar navbar-expand-md navbar-light justify-content-end';
+}
 ?>

@@ -34,14 +34,8 @@
 
   {% if items %}
 
-  <div class="navbar navbar-expand-md navbar-light justify-content-end">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
     {% if menu_level == 0 %}
-      <ul{{ attributes.addClass('navbar-nav') }}>
+      <ul{{ attributes }}>
     {% else %}
       <ul>
     {% endif %}
@@ -51,24 +45,36 @@
         set item_classes = [
           'nav-item',
           item.in_active_trail ? 'active',
+          item.is_collapsed ? 'dropdown'
         ]
       %}
       <li{{ item.attributes.addClass(item_classes) }}>
-        {%
-          set link_classes = [
-            'nav-link',
-            item.in_active_trail ? 'active',
-          ]
-        %}
-        {{ link(item.title, item.url, {'class':link_classes}) }}
-        {% if item.below %}
-          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+
+        {% if item.is_collapsed %}
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
         {% endif %}
+
+          {%
+            set link_classes = [
+              'nav-link'
+            ]
+          %}
+
+          {{ link(item.title, item.url, {'class':link_classes}) }}
+          {% if item.below %}
+            {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+          {% endif %}
+
+        {% if item.is_collapsed %}
+          </div><!-- end .dropdown-menu -->
+        {% endif %}
+
       </li>
     {% endfor %}
     </ul>
-    </div>
 
-  </div>
   {% endif %}
 {% endmacro %}
